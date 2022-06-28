@@ -6,13 +6,13 @@ DEBUG_MODE = True
 
 def list_at_or_empty(target_list, idx):
   '''Returns element of target_list at index idx or []'''
-  if idx > 0 and idx < len(target_list):
+  if idx >= 0 and idx < len(target_list):
     return list_[idx]
   return []
 
 def string_at_or_empty(string, idx):
   '''Returns char of string at index idx or empty string'''
-  if idx > 0 and idx < len(string):
+  if idx >= 0 and idx < len(string):
     return string[idx]
   return ''
 

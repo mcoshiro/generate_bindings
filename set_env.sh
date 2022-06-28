@@ -1,0 +1,4 @@
+#!/bin/bash
+export GENERATE_BINDINGS_DIR=$(dirname $(readlink -e "$BASH_SOURCE"))
+export PYTHONPATH=$GENERATE_BINDINGS_DIR/libs:$PYTHONPATH
+#export PATH=$GENERATE_BINDINGS_DIR/bin::$PATH
