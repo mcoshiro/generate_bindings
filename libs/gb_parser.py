@@ -3,7 +3,6 @@
 from gb_utils import *
 import enum
 import re
-import pdb
 
 class Parser:
   '''Class implementing skeleton of a basic parser'''
@@ -141,13 +140,9 @@ class Parser:
         #recurse one time
         subtoken_regex = self.get_regex_by_token_type(current_regex[2])
         new_token = self.make_token_by_type(current_regex[2])
-        debug('calling subtoken '+current_regex[2])
         if (not self.eval_parser(subtoken_regex, new_token)):
-          debug('finished calling subtoken '+current_regex[2]+': failed')
           self.position = original_pos
           return False
-        debug('finished calling subtoken '+current_regex[2]+': success')
-        #pdb.set_trace()
         self.exec_callback(py_token, current_regex[1], new_token)
         regex_pos += 1
       elif (current_regex[0]=='optional'):

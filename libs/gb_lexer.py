@@ -20,11 +20,11 @@ cpp_regex_list = [
     r'"(?:[^"\\]*)(?:\\.[^"\\]*)*"', #string literal
     '\'(?:[^\\\\]|\\\\.)\'', #char literal
     r'\d+(?:\.\d*)?(?:e(?:\+\-)?\d+)?', #numeric literal
-    r'\+\+',r'--',r'<=',r'>=',r'==',r'!=',r'&&',r'\|\|',r'<<',r'>>',
+    r'\+\+',r'--',r'<=',r'>=',r'==',r'!=',r'&&',r'\|\|',r'<<',
     r'\+=',r'-=',r'\*=',r'/=',r'%=',r'->',r'<<=',r'>>=',r'&=',r'\|=',r'\^=',
     r'\.\.\.',r'//',r'\+',r'-',r'\*',r'/',r'%',r'<',r'>',r'!',r'&',r'\|',
     r'~',r'\^',r'=',r'\?',r':',r'\(',r'\)',r'\[',r'\]',r'\{',r'\}',r'=',
-    r',',r'"','\'',r';',r'\.',r'\\',r'#', #special character(s)
+    r',',r'"','\'',r';',r'\.',r'\\',r'#', #special character(s), currently splitting >>
     r'[a-zA-Z_]\w*(?:::[a-zA-Z_]\w*)*'#name
     ]
 cpp_regex = compile_regex_list(cpp_regex_list)
